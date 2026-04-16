@@ -1,7 +1,9 @@
 name: MovieFlix Data Extraction
 
 on:
-  workflow_dispatch:      # Permite rodar manualmente pelo botão no GitHub
+#  schedule:
+#    - cron: '0 0 * * 0' # Roda todo domingo à meia-noite
+ workflow_dispatch:      # Permite rodar manualmente pelo botão no GitHub
 
 jobs:
    build:
@@ -22,7 +24,6 @@ jobs:
 
        - name: Executar Script de Extração
          env:
-
            # Usaremos um "Secret" para proteger sua chave da API
            OMDB_API_KEY: ${{ secrets.OMDB_API_KEY }}
          run: python extract_pipeline.py
