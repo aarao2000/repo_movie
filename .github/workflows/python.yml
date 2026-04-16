@@ -1,11 +1,7 @@
 name: MovieFlix Data Extraction
 
 on:
-
-#  schedule:
-#    - cron: '0 0 * * 0' # Roda todo domingo à meia-noite
-
-workflow_dispatch:      # Permite rodar manualmente pelo botão no GitHub
+  workflow_dispatch:      # Permite rodar manualmente pelo botão no GitHub
 
 jobs:
    build:
